@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	pb "chitchat/grpc"
+	pb "github.com/augustersej123/ChitChat/grpc"
 )
 
 type EventType int
@@ -49,9 +49,9 @@ func (b *Broadcaster) Run() {
 		case EventJoin:
 			b.participants[e.Participant.ID] = e.Participant
 			t := b.clock.Update(e.ClientTime)
-			text := fmt.Sprintf("Participant %s joined the chat at logical time %d)", e.Participant.ID, t)
+			text := fmt.Sprintf("Participant %s joined the chat at logical time %d", e.Participant.ID, t)
 			log.Printf("[Server] event=broadcast-join client=%s lamport=%d", e.Participant.ID, t)
-			b.deliver(text, t)
+			b.deliver("Server", text, t)
 
 		case EventLeave:
 			p, ok := b.participants[e.Participant.ID]
@@ -61,20 +61,20 @@ func (b *Broadcaster) Run() {
 			delete(b.participants, e.Participant.ID)
 			close(p.Out)
 			t := b.clock.Update(e.ClientTime)
-			text := fmt.Sprintf("Participant %s left the chat at logical time %d)", e.Participant.ID, t)
+			text := fmt.Sprintf("Participant %s left the chat at logical time %d", e.Participant.ID, t)
 			log.Printf("[Server] event=broadcast-leave client=%s lamport=%d", e.Participant.ID, t)
-			b.deliver(text, t)
+			b.deliver("Server", text, t)
 
 		case EventPublish:
 			t := b.clock.Update(e.ClientTime)
 			log.Printf("[Server] event=broadcast-publish client=%s lamport=%d", e.Participant.ID, t)
-			b.deliver(fmt.Sprintf("%s: %s", e.Participant.ID, e.Content), t)
+			b.deliver(e.Participant.ID, e.Content, t)
 		}
 	}
 }
 
-func (b *Broadcaster) deliver(content string, t int64) {
-	msg := &pb.ServerMessage{Content: content, LamportTime: t}
+func (b *Broadcaster) deliver(sender, content string, t int64) {
+	msg := &pb.ChatMessage{Sender: sender, Content: content, Timestamp: t}
 	for id, p := range b.participants {
 		select {
 		case p.Out <- msg:

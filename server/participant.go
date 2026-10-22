@@ -1,6 +1,6 @@
 package main
 
-import pb "chitchat/grpc"
+import pb "github.com/augustersej123/ChitChat/grpc"
 
 // Participant is one connected client. Out is drained by that
 // client's sender goroutine in the chat handler
