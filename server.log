@@ -1,0 +1,28 @@
+2026/10/22 15:16:58.736953 [Server] [Startup] listening on :50051
+2026/10/22 15:17:23.721015 [Server] event=broadcast-join client=anna lamport=2
+2026/10/22 15:17:23.721170 [Server] event=deliver client=anna lamport=2
+2026/10/22 15:17:23.721195 [Server] event=broadcast-leave client=anna lamport=3
+2026/10/22 15:17:23.721287 [Server] event=send-error client=anna err=rpc error: code = Unavailable desc = transport is closing
+2026/10/22 15:20:14.715932 [Server] [Startup] listening on :50051
+2026/10/22 15:20:17.426023 [Server] event=broadcast-join client=anna lamport=2
+2026/10/22 15:20:17.426079 [Server] event=deliver client=anna lamport=2
+2026/10/22 15:20:17.426100 [Server] event=broadcast-leave client=anna lamport=3
+2026/10/22 15:20:17.426277 [Server] event=send-error client=anna err=rpc error: code = Unavailable desc = transport is closing
+2026/10/22 15:20:23.499950 [Server] event=broadcast-join client=karl lamport=4
+2026/10/22 15:20:23.499967 [Server] event=deliver client=karl lamport=4
+2026/10/22 15:20:23.499983 [Server] event=broadcast-leave client=karl lamport=5
+2026/10/22 15:20:23.499982 [Server] event=send-error client=karl err=rpc error: code = Internal desc = transport: SendHeader called multiple times
+2026/10/22 15:20:28.968144 [Server] event=broadcast-join client=August lamport=6
+2026/10/22 15:20:28.970572 [Server] event=deliver client=August lamport=6
+2026/10/22 15:20:28.970583 [Server] event=broadcast-leave client=August lamport=7
+2026/10/22 15:20:28.970594 [Server] event=send-error client=August err=rpc error: code = Unavailable desc = transport is closing
+2026/10/22 15:27:03.978197 [Server] [Startup] listening on :50051
+2026/10/22 15:27:11.686731 [Server] event=broadcast-join client=anna lamport=2
+2026/10/22 15:27:11.686752 [Server] event=deliver client=anna lamport=2
+2026/10/22 15:27:11.686759 [Server] event=broadcast-leave client=anna lamport=3
+2026/10/22 15:27:11.686798 [Server] event=send-error client=anna err=rpc error: code = Unavailable desc = transport is closing
+2026/10/22 15:27:55.469001 [Server] [Startup] listening on :50051
+2026/10/22 15:27:57.880762 [Server] event=broadcast-join client=anna lamport=2
+2026/10/22 15:27:57.880807 [Server] event=deliver client=anna lamport=2
+2026/10/22 15:27:57.880826 [Server] event=broadcast-leave client=anna lamport=3
+2026/10/22 15:27:57.880871 [Server] event=send-error client=anna err=rpc error: code = Unavailable desc = transport is closing

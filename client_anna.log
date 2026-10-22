@@ -1,0 +1,8 @@
+2026/10/22 15:17:23.673049 [Client] [Connect] connected to the server
+2026/10/22 15:17:23.719313 [Client] event=send-join name=anna lamport=1
+2026/10/22 15:20:17.311141 [Client] [Connect] connected to the server
+2026/10/22 15:20:17.424237 [Client] event=send-join name=anna lamport=1
+2026/10/22 15:27:11.667607 [New Client has connected to the server. Client name: %s anna
+2026/10/22 15:27:11.684281 [Client] event=send-join name=anna lamport=1
+2026/10/22 15:27:57.792538 [New Client has connected to the server. Client name:  anna
+2026/10/22 15:27:57.879906 [Client] event=send-join name=anna lamport=1
