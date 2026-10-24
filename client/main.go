@@ -50,4 +50,8 @@ func main() {
 	if err := sendJoin(stream, clock, name); err != nil {
 		log.Fatalf("[Client] failed to join %v", err)
 	}
+
+	fmt.Printf("Joined as %s. Type a message, or /leave to quit.\n", name)
+	go receive(stream, clock)
+	readInput(stream, clock)
 }
