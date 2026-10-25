@@ -1,8 +1,0 @@
-[Client Vitus] 2026/10/25 17:42:15.165559 event=connect client=Vitus
-[Client Vitus] 2026/10/25 17:42:15.179713 [Client] event=send-join name=Vitus lamport=1
-[Client Vitus] 2026/10/25 17:42:15.181724 event=receive sender=Server content="Participant Vitus joined the chat at logical time 3" msg_lamport=3 lamport=4
-[Client Vitus] 2026/10/25 17:42:26.629666 event=receive sender=Server content="Participant Nicklas joined the chat at logical time 4" msg_lamport=4 lamport=5
-[Client Vitus] 2026/10/25 17:42:33.167982 event=receive sender=Nicklas content="deltager vi alle?" msg_lamport=7 lamport=8
-[Client Vitus] 2026/10/25 17:42:43.498398 event=receive sender=August content="yesyes" msg_lamport=10 lamport=11
-[Client Vitus] 2026/10/25 17:43:27.496179 event=send-publish lamport=12
-[Client Vitus] 2026/10/25 17:43:27.497490 event=receive sender=Vitus content="ok, det kører!" msg_lamport=13 lamport=14
